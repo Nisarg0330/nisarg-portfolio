@@ -51,7 +51,7 @@ export const CERTIFICATIONS = [
 
 // ─── Contact Links ─────────────────────────────────────────────────────────────
 export const CONTACT_LINKS = [
-  { icon: "✉️", label: "Email",    value: "nisargpatel0330l@email.com",      href: "mailto:nisargpate0330@email.com" },
+  { icon: "✉️", label: "Email",    value: "nisargpatel0330@email.com",      href: "mailto:nisargpate0330@email.com" },
   { icon: "💼", label: "LinkedIn", value: "linkedin.com/in/nisarg0330",  href: "https://linkedin.com/in/nisarg0330" },
   { icon: "🐙", label: "GitHub",   value: "github.com/nisarg0330",       href: "https://github.com/nisarg0330" },
 ];
