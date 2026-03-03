@@ -37,13 +37,26 @@ export default function Hero({ scrollTo }) {
           fontWeight: 900,
           lineHeight: 1.08,
           letterSpacing: "clamp(-1.5px, -0.03em, -2.5px)",
-          marginBottom: 20,
-          maxWidth: 820,
+          marginBottom: 12,
+          maxWidth: 860,
         }}>
-          Building Scalable<br />
-          <span className="gradient-text">Software & Cloud</span><br />
-          Solutions.
+          Hi, I'm{" "}
+          <span className="gradient-text">Nisarg Patel</span>
         </h1>
+
+        <h2 style={{
+          fontSize: "clamp(24px, 4.5vw, 52px)",
+          fontWeight: 800,
+          lineHeight: 1.12,
+          letterSpacing: "clamp(-1px, -0.025em, -2px)",
+          marginBottom: 20,
+          maxWidth: 860,
+          color: "#0f172a",
+        }}>
+          Building Scalable{" "}
+          <span style={{ color: "#6366f1" }}>Software & Cloud</span>{" "}
+          Solutions.
+        </h2>
 
         {/* ── Tagline ── */}
         <p style={{
