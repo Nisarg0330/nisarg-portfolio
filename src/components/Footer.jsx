@@ -1,3 +1,5 @@
+import { CONTACT_LINKS } from "../data/constants";
+
 export default function Footer() {
   return (
     <footer style={{ background: "#0f172a", padding: "clamp(20px,3vw,36px) clamp(16px,3vw,24px)", borderTop: "1px solid #1e293b" }}>
@@ -25,7 +27,7 @@ export default function Footer() {
             {["GitHub", "LinkedIn", "Email"].map((l) => (
               <a
                 key={l}
-                href="#"
+                href={CONTACT_LINKS.find(link => link.label === l)?.href}
                 style={{
                   color: "#94a3b8",
                   fontSize: 13,
