@@ -1,0 +1,91 @@
+# EmailJS Setup Guide
+# Follow these steps to enable personalised auto-reply emails from your portfolio contact form.
+
+## Step 1 — Create a Free EmailJS Account
+1. Go to https://www.emailjs.com
+2. Click "Sign Up Free"
+3. Verify your email address
+
+---
+
+## Step 2 — Add an Email Service
+1. In your EmailJS dashboard, go to "Email Services"
+2. Click "Add New Service"
+3. Choose your email provider (Gmail is easiest)
+4. Click "Connect Account" and sign in with your Gmail
+5. Click "Create Service"
+6. Copy your SERVICE ID (e.g. service_abc123) — you'll need this later
+
+---
+
+## Step 3 — Create the Email Template
+1. Go to "Email Templates" in the dashboard
+2. Click "Create New Template"
+3. Set the template up as follows:
+
+   TO EMAIL field:     {{to_email}}
+   FROM NAME field:    Nisarg Patel
+   SUBJECT field:      Thank you for reaching out, {{to_name}}!
+   REPLY TO field:     nisarg.patel@email.com  (your actual email)
+
+   EMAIL BODY (paste exactly):
+   ─────────────────────────────────────────────
+   Hi {{to_name}},
+
+   Thank you for reaching out — I really appreciate your interest.
+
+   Your message has been received successfully, and I'll personally review it shortly. You can expect a response from me within 24 hours.
+
+   If your matter is urgent, feel free to follow up directly via LinkedIn.
+
+   Looking forward to connecting.
+
+   Warm regards,
+   Nisarg Patel
+   Software Engineer | Cloud Enthusiast
+   ─────────────────────────────────────────────
+
+4. Click "Save"
+5. Copy your TEMPLATE ID (e.g. template_xyz789) — you'll need this later
+
+---
+
+## Step 4 — Get Your Public Key
+1. Go to "Account" → "General"
+2. Copy your PUBLIC KEY (e.g. aBcDeFgHiJkLmNoP)
+
+---
+
+## Step 5 — Update Contact.jsx
+Open src/components/Contact.jsx and replace the three placeholder values at the top:
+
+   const EMAILJS_SERVICE_ID  = "YOUR_SERVICE_ID";   ← replace with your Service ID
+   const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";  ← replace with your Template ID
+   const EMAILJS_PUBLIC_KEY  = "YOUR_PUBLIC_KEY";   ← replace with your Public Key
+
+Example after filling in:
+   const EMAILJS_SERVICE_ID  = "service_abc123";
+   const EMAILJS_TEMPLATE_ID = "template_xyz789";
+   const EMAILJS_PUBLIC_KEY  = "aBcDeFgHiJkLmNoP";
+
+---
+
+## Step 6 — Install EmailJS & Run
+In your terminal:
+   npm install
+   npm start
+
+---
+
+## How It Works
+When someone submits the form:
+1. EmailJS sends the auto-reply to the visitor's email ({{to_name}} is replaced with their actual name)
+2. You also receive a notification at your connected Gmail
+3. The form shows a success screen confirming the email was sent
+
+## Free Plan Limits
+- 200 emails per month
+- 2 email templates
+- No credit card required
+
+This is more than enough for a personal portfolio.
