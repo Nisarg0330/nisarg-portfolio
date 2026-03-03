@@ -45,7 +45,7 @@ export default function Certifications() {
         </div>
 
         {/* Cards */}
-        <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", flexDirection: "row", gap: 20 }}>
+        <div style={{ maxWidth: 500, margin: "0 auto", display: "flex", flexDirection: "column", gap: 20 }}>
           {CERTIFICATIONS.map((cert) => (
             <CertCard key={cert.title} {...cert} />
           ))}

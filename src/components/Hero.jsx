@@ -1,4 +1,5 @@
 import { HERO_STATS } from "../data/constants";
+import resumePDF from "../assets/Nisarg_Patel.pdf";
 
 export default function Hero({ scrollTo }) {
   return (
@@ -75,7 +76,7 @@ export default function Hero({ scrollTo }) {
         <div className="hero-btns">
           <button className="btn-primary" onClick={() => scrollTo("projects")}>View Projects →</button>
           <button className="btn-outline" onClick={() => scrollTo("contact")}>Contact Me</button>
-          <a href="/assets/Nisarg_Patel.pdf" className="btn-outline">⬇ Resume</a>
+          <a href={resumePDF} className="btn-outline" download>⬇ Resume</a>
         </div>
 
         {/* ── Stats ── */}
